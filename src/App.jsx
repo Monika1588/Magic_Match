@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import cardsData from "./data/cardsData";
 import Card from "./components/Card";
 import "./index.css";
+import { Sparkles } from "lucide-react";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -9,7 +10,7 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [moves, setMoves] = useState(0);
-  const [gameCompleted, setGameCompleted] = useState(false); 
+  const [gameCompleted, setGameCompleted] = useState(false);
 
   const shuffleCards = () => {
     const shuffled = [...cardsData, ...cardsData]
@@ -20,7 +21,7 @@ function App() {
     setMoves(0);
     setChoiceOne(null);
     setChoiceTwo(null);
-    setGameCompleted(false); 
+    setGameCompleted(false);
   };
 
   useEffect(() => {
@@ -66,10 +67,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>✨ Magic Match ✨</h1>
+      <h1 className="title">
+        <Sparkles size={28} strokeWidth={1.6} />
+        Magic Match
+        <Sparkles size={28} strokeWidth={1.6} />
+      </h1>
       <button className="new-game-btn" onClick={shuffleCards}>
-        New Game
-      </button>
+  New Game
+</button>
+
 
       <p className="moves">Moves: {moves}</p>
 
@@ -87,7 +93,7 @@ function App() {
         ))}
       </div>
 
-      {}
+      { }
       {gameCompleted && (
         <div className="popup-overlay">
           <div className="popup-box">
