@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
-  background: #050933;
+  background: radial-gradient(circle, #050933, #00001a);
+
   color: white;
   text-align: center;
   padding: 20px;
