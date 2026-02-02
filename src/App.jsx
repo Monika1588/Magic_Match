@@ -3,6 +3,10 @@ import cardsData from "./data/cardsData";
 import Card from "./components/Card";
 import "./index.css";
 import { Sparkles } from "lucide-react";
+import { FaTrophy,FaRedoAlt } from "react-icons/fa";
+
+
+
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -97,12 +101,18 @@ function App() {
       {gameCompleted && (
         <div className="popup-overlay">
           <div className="popup-box">
-            <h2>🎉 Congratulations! 🎉</h2>
+          <h2 className="titlee">
+  <FaTrophy className="icon" />
+  Congratulations!
+  <FaTrophy className="icon" />
+</h2>
             <p>You completed the game in <b>{moves}</b> moves.</p>
 
             <button className="popup-btn" onClick={shuffleCards}>
-              Play Again 🔁
-            </button>
+  <FaRedoAlt style={{ marginRight: "8px" }} />
+  Play Again
+</button>
+
           </div>
         </div>
       )}
