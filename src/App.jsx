@@ -3,10 +3,7 @@ import cardsData from "./data/cardsData";
 import Card from "./components/Card";
 import "./index.css";
 import { Sparkles } from "lucide-react";
-import { FaTrophy,FaRedoAlt } from "react-icons/fa";
-
-
-
+import { FaTrophy, FaRedoAlt } from "react-icons/fa";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -77,8 +74,8 @@ function App() {
         <Sparkles size={28} strokeWidth={1.6} />
       </h1>
       <button className="new-game-btn" onClick={shuffleCards}>
-  New Game
-</button>
+        New Game
+      </button>
 
 
       <p className="moves">Moves: {moves}</p>
@@ -101,17 +98,17 @@ function App() {
       {gameCompleted && (
         <div className="popup-overlay">
           <div className="popup-box">
-          <h2 className="titlee">
-  <FaTrophy className="icon" />
-  Congratulations!
-  <FaTrophy className="icon" />
-</h2>
+            <h2 className="titlee">
+              <FaTrophy className="icon" />
+              Congratulations!
+              <FaTrophy className="icon" />
+            </h2>
             <p>You completed the game in <b>{moves}</b> moves.</p>
 
             <button className="popup-btn" onClick={shuffleCards}>
-  <FaRedoAlt style={{ marginRight: "8px" }} />
-  Play Again
-</button>
+              <FaRedoAlt style={{ marginRight: "8px" }} />
+              Play Again
+            </button>
 
           </div>
         </div>

@@ -54,7 +54,6 @@ body {
     box-shadow 0.15s ease;
 }
 
-/* soft highlight sweep */
 .new-game-btn::after {
   content: "";
   position: absolute;
